@@ -1,10 +1,15 @@
-const bar = document.querySelector('i');
-const links = document.getElementById('links');
+// const bar = document.querySelector('i');
+// const links = document.getElementById('links');
 
-bar.addEventListener('click', () => {
-    if (links.style.display === 'none') {
-        links.style.display = 'block';
+let selectObj = {
+    bar : document.querySelector('i'),
+    links : document.getElementById('links')
+}
+
+selectObj.bar.addEventListener('click', () => {
+    if (selectObj.links.style.display === 'none') {
+        selectObj.links.style.display = 'block';
     }else {
-        links.style.display = 'none';
+        selectObj.links.style.display = 'none';
     }
 });
